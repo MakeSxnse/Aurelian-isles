@@ -3,6 +3,8 @@ import Hero from "@/components/hero";
 import { Kolekce } from "@/components/kolekce";
 import Proces from "@/components/proces";
 import SluzbyNaMiru from "@/components/sluzby_na_miru";
+import Vhledy from "@/components/vhledy";
+import KontaktniSekce from "@/components/kontaktni_sekce";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Proces />
       <SluzbyNaMiru />
       <ArchitekturaTicha />
+      <Vhledy />
+      <KontaktniSekce />
     </main>
   );
 }
