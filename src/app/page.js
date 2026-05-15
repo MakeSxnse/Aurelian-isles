@@ -6,16 +6,20 @@ import SluzbyNaMiru from "@/components/sluzby_na_miru";
 import Vhledy from "@/components/vhledy";
 import KontaktniSekce from "@/components/kontaktni_sekce";
 
+import PageTransition from "@/components/PageTransition";
+
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Kolekce />
-      <Proces />
-      <SluzbyNaMiru />
-      <ArchitekturaTicha />
-      <Vhledy />
-      <KontaktniSekce />
+      <PageTransition>
+        <Hero />
+        <Kolekce />
+        <Proces />
+        <SluzbyNaMiru />
+        <ArchitekturaTicha />
+        <Vhledy />
+        <KontaktniSekce />
+      </PageTransition>
     </main>
   );
 }

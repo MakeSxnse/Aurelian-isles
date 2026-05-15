@@ -3,35 +3,48 @@ import Link from "next/link";
 
 export default function SluzbyNaMiru() {
     return (
-        <div className="w-full bg-gray-100 flex justify-center items-center py-12 md:py-24 lg:py-32">
-            <div className="mx-[5%] flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
-                <div className="w-full aspect-square md:w-[300px] md:h-[300px] lg:w-[560px] lg:h-[560px] relative overflow-hidden">
-                    <Image src="/letadlo.png" alt="Služby na míru" fill className="object-cover" />
+        <div className="w-full bg-white flex justify-center items-center py-20 md:py-32">
+            <div className="mx-[5%] flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div className="w-full aspect-[4/5] md:w-[400px] md:h-[500px] lg:w-[500px] lg:h-[625px] relative overflow-hidden">
+                    <Image
+                        src="/letadlo.png"
+                        alt="Služby na míru"
+                        fill
+                        className="object-cover"
+                    />
                 </div>
-                <div className="flex flex-col gap-4 md:gap-6 max-w-2xl">
-                    <h2 className="text-sm md:text-base lg:text-[1rem] font-sans text-[#785A1A] tracking-[0.3em] font-medium uppercase">
-                        SLUŽBY NA MÍRU
-                    </h2>
-                    <p className="text-sm md:text-base font-sans text-black leading-tight mb-[16px] md:mb-[24px] lg:mb-[32px]">
+                <div className="flex flex-col gap-6 md:gap-8 max-w-xl">
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-[0.9rem] font-sans text-[#785A1A] tracking-[0.3em] font-medium uppercase">
+                            SLUŽBY NA MÍRU
+                        </h2>
+                        <h3 className="text-[1.5rem] md:text-[2rem] font-serif text-zinc-800 leading-tight">
+                            Správa, která nezná hranice
+                        </h3>
+                    </div>
+
+                    <p className="text-sm font-sans text-zinc-500 leading-relaxed">
                         Od zajištění privátní letecké dopravy po komplexní správu vašeho ostrovního sídla. Náš tým concierge se postará o každý detail, zatímco vy si užíváte nerušený klid.
                     </p>
 
-                    <div className="flex gap-4 md:gap-[20px] items-center">
-                        <Image src="/flight_takeoff_24dp_785A1A_FILL0_wght400_GRAD0_opsz24.svg" alt="Služby na míru" width={22} height={22} className="rounded-lg object-cover" />
-                        <p>AURELIAN AVIATION</p>
-                    </div>
-                    
-                    <div className="flex gap-4 md:gap-[20px] items-center">
-                        <Image src="/foundation_24dp_785A1A_FILL0_wght400_GRAD0_opsz24.svg" alt="Služby na míru" width={22} height={22} className="rounded-lg object-cover" />
-                        <p>SPRÁVA MAJETKU</p>
+                    <div className="space-y-6 mt-2">
+                        <div className="flex gap-4 items-center">
+                            <Image src="/flight.svg" alt="Aviation" width={22} height={22} className="opacity-80" />
+                            <p className="text-[0.8rem] tracking-[0.2em] text-zinc-700 font-medium uppercase">AURELIAN AVIATION</p>
+                        </div>
+
+                        <div className="flex gap-4 items-center">
+                            <Image src="/property.svg" alt="Property" width={22} height={22} className="opacity-80" />
+                            <p className="text-[0.8rem] tracking-[0.2em] text-zinc-700 font-medium uppercase">PROPERTY MANAGEMENT</p>
+                        </div>
+
+                        <div className="flex gap-4 items-center">
+                            <Image src="/concierge.svg" alt="Concierge" width={22} height={22} className="opacity-80" />
+                            <p className="text-[0.8rem] tracking-[0.2em] text-zinc-700 font-medium uppercase">LIFESTYLE CONCIERGE</p>
+                        </div>
                     </div>
 
-                    <div className="flex gap-4 md:gap-[20px] items-center">
-                        <Image src="/concierge_24dp_785A1A_FILL0_wght400_GRAD0_opsz24.svg" alt="Služby na míru" width={22} height={22} className="rounded-lg object-cover" />
-                        <p>LIFESTYLE CONCIERGE</p>
-                    </div>
-
-                    <Link href="/kolekce" className="w-fit px-6 py-3 md:px-8 md:py-4 bg-[#011C3B] border text-white font-sans text-xs md:text-sm tracking-widest hover:bg-transparent hover:border hover:border-[#011C3B] hover:text-[#011C3B] transition-colors uppercase mt-4 md:mt-[16px]">
+                    <Link href="/sluzby" className="w-fit px-10 py-4 bg-transparent border border-[#785A1A] text-[#785A1A] font-sans text-xs tracking-[0.2em] hover:bg-[#785A1A] hover:text-white transition-all uppercase mt-6 font-medium">
                         OBJEVIT NAŠE SLUŽBY
                     </Link>
                 </div>

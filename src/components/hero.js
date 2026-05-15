@@ -12,7 +12,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#000] pt-[80px]">
+        <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#000]">
             <div
                 className={`absolute inset-0 transition-transform duration-[4000ms] ease-out brightness-75 ${mounted ? "scale-100" : "scale-110"
                     }`}
@@ -51,7 +51,7 @@ export default function Hero() {
                             }`}
                     >
                         {/* Separate Blur Layer to ensure it's rendered during animation */}
-                        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-white/30 -z-12" />
+                        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-white/30 -z-10" />
 
                         <Link
                             href="#ostrovy"

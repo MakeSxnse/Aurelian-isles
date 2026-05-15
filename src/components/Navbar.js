@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,9 +43,9 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-50 h-[80px] transition-colors duration-500 border-b ${scrolled || isMenuOpen
-            ? "bg-zinc-50 border-zinc-200 shadow-sm"
-            : "bg-transparent border-transparent"
+        className={`fixed top-0 w-full z-50 h-[80px] transition-colors duration-500 border-b ${scrolled || isMenuOpen || !isHomePage
+          ? "bg-zinc-50 border-zinc-200 shadow-sm"
+          : "bg-transparent border-transparent"
           }`}
       >
         <div
@@ -52,7 +55,7 @@ export default function Navbar() {
           <div className="flex-1 flex justify-start">
             <Link
               href="/"
-              className={`text-lg md:text-xl font-medium font-serif tracking-widest uppercase transition-colors duration-500 ${scrolled || isMenuOpen ? "text-[#001B3A]" : "text-white"
+              className={`text-lg md:text-xl font-medium font-serif tracking-widest uppercase transition-colors duration-500 ${scrolled || isMenuOpen || !isHomePage ? "text-[#001B3A]" : "text-white"
                 }`}
             >
               AURELIAN ISLES
@@ -65,7 +68,7 @@ export default function Navbar() {
               <Link
                 key={label}
                 href={href}
-                className={`text-[10px] font-medium transition-all duration-500 uppercase tracking-widest hover:text-[#C5A059] ${scrolled ? "text-[#001B3A]/80" : "text-white/80"
+                className={`text-[10px] font-medium transition-all duration-500 uppercase tracking-widest hover:text-[#785A1A] ${scrolled || !isHomePage ? "text-[#001B3A]/80" : "text-white/80"
                   }`}
               >
                 {label}
@@ -73,12 +76,23 @@ export default function Navbar() {
             ))}
           </div>
 
-
+          {/* Action Button - Right (Desktop) */}
+          <div className="hidden lg:flex flex-1 justify-end">
+            <Link
+              href="/kontakt"
+              className={`px-8 py-3 text-[10px] font-medium uppercase tracking-[0.2em] transition-all duration-500 border ${scrolled || !isHomePage
+                ? "bg-[#001B3A] text-white border-[#001B3A] hover:bg-transparent hover:text-[#001B3A]"
+                : "bg-white/10 backdrop-blur-md text-white border-white/30 hover:bg-white hover:text-[#001B3A]"
+                }`}
+            >
+              KONTAKT
+            </Link>
+          </div>
 
           {/* Hamburger Icon (Mobile) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 z-[60] transition-colors duration-500 ${scrolled || isMenuOpen ? "text-[#001B3A]" : "text-white"
+            className={`lg:hidden p-2 z-[60] transition-colors duration-500 ${scrolled || isMenuOpen || !isHomePage ? "text-[#001B3A]" : "text-white"
               }`}
             aria-label="Toggle menu"
           >
