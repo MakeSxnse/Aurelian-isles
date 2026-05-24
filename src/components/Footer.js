@@ -18,6 +18,8 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-zinc-600 font-sans">
             <li><Link href="/prodej" className="hover:text-[#785A1A] transition-colors">Ostrovy</Link></li>
             <li><Link href="/sluzby" className="hover:text-[#785A1A] transition-colors">Služby</Link></li>
+            <li><Link href="/pobocky" className="hover:text-[#785A1A] transition-colors">Pobočky</Link></li>
+            <li><Link href="/o-nas" className="hover:text-[#785A1A] transition-colors">O nás</Link></li>
             <li><Link href="/blog" className="hover:text-[#785A1A] transition-colors">Magazín</Link></li>
           </ul>
         </div>
