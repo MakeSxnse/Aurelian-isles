@@ -100,23 +100,23 @@ export default function PobockyPage() {
                   style={{ left: `${branch.coordinates.x}%`, top: `${branch.coordinates.y}%` }}
                 >
                   <span className={`absolute -inset-3 rounded-full opacity-75 transition-all duration-500 ${isActive
-                      ? "bg-[#C5A059]/30 animate-ping"
-                      : "bg-[#785A1A]/0 group-hover/pin:bg-[#785A1A]/20 group-hover/pin:animate-pulse"
+                    ? "bg-[#C5A059]/30 animate-ping"
+                    : "bg-[#785A1A]/0 group-hover/pin:bg-[#785A1A]/20 group-hover/pin:animate-pulse"
                     }`} />
 
                   <span className={`absolute -inset-1.5 rounded-full border transition-all duration-300 ${isActive
-                      ? "border-[#C5A059] bg-[#785A1A]/20 scale-110"
-                      : "border-white/40 bg-white/5 group-hover/pin:border-[#C5A059]/50 group-hover/pin:bg-[#785A1A]/10"
+                    ? "border-[#C5A059] bg-[#785A1A]/20 scale-110"
+                    : "border-white/40 bg-white/5 group-hover/pin:border-[#C5A059]/50 group-hover/pin:bg-[#785A1A]/10"
                     }`} />
 
                   <span className={`relative block w-2 h-2 rounded-full shadow-lg transition-all duration-300 ${isActive
-                      ? "bg-[#C5A059] scale-125"
-                      : "bg-white group-hover/pin:bg-[#C5A059]"
+                    ? "bg-[#C5A059] scale-125"
+                    : "bg-white group-hover/pin:bg-[#C5A059]"
                     }`} />
 
                   <span className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-[#001B3A]/95 text-white text-[9px] font-sans tracking-widest uppercase rounded border border-[#785A1A]/30 shadow-xl pointer-events-none transition-all duration-300 ${isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-1 group-hover/pin:opacity-100 group-hover/pin:translate-y-0"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-1 group-hover/pin:opacity-100 group-hover/pin:translate-y-0"
                     }`}>
                     {branch.city}
                   </span>

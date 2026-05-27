@@ -181,8 +181,7 @@ export default function ONasPage() {
 
       <div className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection className="bg-zinc-50 border border-zinc-100 p-8 md:p-16 rounded-sm relative overflow-hidden group hover:border-[#785A1A]/30 transition-all duration-500">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#785A1A]/5 blur-2xl pointer-events-none" />
+          <AnimatedSection className="bg-zinc-50 border border-zinc-100 p-8 md:p-16 relative overflow-hidden group hover:border-[#785A1A]/30 transition-all duration-500">
 
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 relative z-10">
               <div className="space-y-4 max-w-2xl">
@@ -197,7 +196,7 @@ export default function ONasPage() {
               <div className="shrink-0 w-full lg:w-auto">
                 <Link
                   href="/kontakt"
-                  className="w-full lg:w-auto block text-center px-10 py-5 bg-[#001B3A] border border-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] hover:border-[#785A1A] transition-all duration-300 rounded-sm"
+                  className="w-full lg:w-auto block text-center px-10 py-5 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] hover:border-[#785A1A] transition-all duration-300 rounded-sm"
                 >
                   KONTAKTOVAT KURÁTORA
                 </Link>
