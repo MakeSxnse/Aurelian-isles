@@ -24,7 +24,7 @@ export default function KontaktniSekce() {
                 </div>
               </div>
 
-              <a href="#" className="inline-block mt-10 text-sm font-semibold tracking-[0.22em] uppercase text-white border-b border-white/40 pb-1 hover: border[#785A1A]">
+              <a href="/kontakt" className="inline-block mt-10 text-sm font-semibold tracking-[0.22em] uppercase text-white border-b border-white/40 pb-1 hover: border[#785A1A]">
                 Kontaktovat naše kanceláře
               </a>
             </div>
@@ -49,7 +49,7 @@ export default function KontaktniSekce() {
             Dovolte nám být vaším průvodcem ve světě, kde jedinou hranicí je horizont.
           </p>
           <a
-            href="#"
+            href="/kontakt"
             className="mt-12 inline-flex items-center justify-center bg-[#785A1A] px-8 py-4 text-sm font-sans uppercase text-white hover: border-[#785A1A] border-2 transition-colors duration-300 hover:bg-transparent hover:text-[#785A1A] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#785A1A]"
           >
             Kontaktovat specialistu

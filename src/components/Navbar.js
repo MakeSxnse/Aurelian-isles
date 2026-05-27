@@ -132,13 +132,15 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <button
-            className={`mt-8 px-12 py-4 bg-[#001B3A] text-white text-xs font-medium uppercase tracking-widest transition-all duration-500 transform ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          <Link
+            href="/kontakt"
+            onClick={() => setIsMenuOpen(false)}
+            className={`block mt-8 px-12 py-4 bg-[#001B3A] text-white text-xs font-medium uppercase tracking-widest transition-all duration-500 transform text-center ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
             style={{ transitionDelay: `${navLinks.length * 100}ms` }}
           >
             POPTAT
-          </button>
+          </Link>
         </div>
 
         {/* Decorative background element */}
