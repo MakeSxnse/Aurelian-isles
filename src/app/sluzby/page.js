@@ -94,9 +94,6 @@ export default function SluzbyPage() {
                 <p className="text-sm font-sans text-zinc-600 leading-relaxed mb-8 flex-grow">
                   Zajistíme, aby byl váš majetek v dokonalém stavu bez vašeho přičinění. Od kompletní údržby, správy personálu, až po zajištění plné připravenosti na váš příjezd.
                 </p>
-                <Link href="/kontakt" className="block w-full text-center py-4 bg-[#001B3A] text-white text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-[#002855] transition-colors">
-                  POPTAT SPRÁVU MAJETKU
-                </Link>
               </div>
             </AnimatedSection>
 
@@ -121,9 +118,6 @@ export default function SluzbyPage() {
                 <p className="text-sm font-sans text-zinc-300 leading-relaxed mb-8 flex-grow">
                   Exkluzivní charterové lety, helikoptéry, VIP transfery přímo z letiště k vašemu ostrovu. Rychlost, bezpečnost a absolutní pohodlí na každém kroku.
                 </p>
-                <Link href="/kontakt" className="block w-full text-center py-4 bg-transparent border border-[#C5A059]/50 text-white hover:border-[#C5A059] hover:bg-[#C5A059]/10 text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">
-                  OBJEDNAT TRANSFER
-                </Link>
               </div>
             </AnimatedSection>
 
@@ -146,9 +140,6 @@ export default function SluzbyPage() {
                 <p className="text-sm font-sans text-zinc-600 leading-relaxed mb-8 flex-grow">
                   Bezpečný transport uměleckých děl, cenností i osobních věcí na váš ostrov odkudkoliv na světě. Zajišťujeme veškeré celní náležitosti a diskrétní doručení.
                 </p>
-                <Link href="/kontakt" className="block w-full text-center py-4 bg-transparent border border-[#785A1A] text-[#785A1A] text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] hover:text-white transition-colors">
-                  ZAJISTIT LOGISTIKU
-                </Link>
               </div>
             </AnimatedSection>
 
@@ -171,9 +162,6 @@ export default function SluzbyPage() {
                 <p className="text-sm font-sans text-zinc-600 leading-relaxed mb-8 flex-grow">
                   Přístup k nemožnému. Od rezervací v michelinských restauracích po exkluzivní zážitky. Váš osobní asistent je k dispozici 24/7.
                 </p>
-                <Link href="/kontakt" className="block w-full text-center py-4 bg-[#001B3A] text-white text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-[#002855] transition-colors">
-                  KONTAKTOVAT ASISTENTA
-                </Link>
               </div>
             </AnimatedSection>
 
