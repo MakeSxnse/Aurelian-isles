@@ -17,26 +17,22 @@ export default function KontaktPage() {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("loading");
     
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-      
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch (err) {
-      setStatus("error");
-    }
+    const subject = encodeURIComponent("Nová poptávka - Soukromé Ostrovy");
+    const body = encodeURIComponent(
+      `Jméno: ${formData.name}\n` +
+      `E-mail: ${formData.email}\n` +
+      `Telefon: ${formData.phone}\n\n` +
+      `Zpráva:\n${formData.message}`
+    );
+    
+    // Otevře výchozí mailový klient uživatele (Outlook, Apple Mail, Gmail...) s předvyplněnými daty
+    window.location.href = `mailto:info@soukromeostrovy.cz?subject=${subject}&body=${body}`;
+    
+    setStatus("success");
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -128,9 +124,9 @@ export default function KontaktPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-serif text-[#001B3A]">Zpráva odeslána</h3>
+                <h3 className="text-2xl font-serif text-[#001B3A]">E-mail připraven</h3>
                 <p className="text-sm text-zinc-500 max-w-sm">
-                  Děkujeme za váš zájem. Náš specialista vás bude diskrétně kontaktovat v nejbližší době.
+                  Otevřeli jsme váš e-mailový klient. Prosím, odešlete připravenou zprávu přímo z něj. Naši specialisté se vám ozvou.
                 </p>
                 <button 
                   onClick={() => setStatus("idle")}
@@ -149,7 +145,7 @@ export default function KontaktPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
+                    className="w-full bg-white text-zinc-900 border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
                     placeholder="Např. Jan Novák"
                   />
                 </div>
@@ -163,7 +159,7 @@ export default function KontaktPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
+                      className="w-full bg-white text-zinc-900 border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
                       placeholder="váš@email.cz"
                     />
                   </div>
@@ -174,7 +170,7 @@ export default function KontaktPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
+                      className="w-full bg-white text-zinc-900 border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
                       placeholder="+420"
                     />
                   </div>
@@ -188,7 +184,7 @@ export default function KontaktPage() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors resize-none"
+                    className="w-full bg-white text-zinc-900 border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors resize-none"
                     placeholder="Jak vám můžeme pomoci?"
                   />
                 </div>
