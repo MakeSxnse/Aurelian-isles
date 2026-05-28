@@ -12,27 +12,39 @@ export default function KontaktPage() {
     message: ""
   });
   const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const subject = encodeURIComponent("Nová poptávka - Soukromé Ostrovy");
-    const body = encodeURIComponent(
-      `Jméno: ${formData.name}\n` +
-      `E-mail: ${formData.email}\n` +
-      `Telefon: ${formData.phone}\n\n` +
-      `Zpráva:\n${formData.message}`
-    );
-    
-    // Otevře výchozí mailový klient uživatele (Outlook, Apple Mail, Gmail...) s předvyplněnými daty
-    window.location.href = `mailto:info@soukromeostrovy.cz?subject=${subject}&body=${body}`;
-    
-    setStatus("success");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setStatus("loading");
+
+    try {
+      // Odešli data formuláře na PHP skript jako JSON
+      const res = await fetch("/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        // PHP vrátilo chybu – zobraz ji uživateli
+        setStatus("error");
+        setErrorMessage(result.message || "Odeslání selhalo.");
+      }
+    } catch {
+      // Síťová chyba nebo PHP nedostupné
+      setStatus("error");
+      setErrorMessage("Nepodařilo se spojit se serverem. Zkuste to prosím znovu.");
+    }
   };
 
   return (
@@ -124,9 +136,9 @@ export default function KontaktPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-serif text-[#001B3A]">E-mail připraven</h3>
+                <h3 className="text-2xl font-serif text-[#001B3A]">Zpráva odeslána</h3>
                 <p className="text-sm text-zinc-500 max-w-sm">
-                  Otevřeli jsme váš e-mailový klient. Prosím, odešlete připravenou zprávu přímo z něj. Naši specialisté se vám ozvou.
+                  Děkujeme za váš zájem. Naši specialisté se vám ozvou v co nejkratší době.
                 </p>
                 <button 
                   onClick={() => setStatus("idle")}
@@ -190,7 +202,7 @@ export default function KontaktPage() {
                 </div>
                 
                 {status === "error" && (
-                  <p className="text-red-500 text-xs mt-2">Došlo k chybě při odesílání, zkuste to prosím znovu.</p>
+                  <p className="text-red-500 text-xs mt-2">{errorMessage || "Došlo k chybě při odesílání, zkuste to prosím znovu."}</p>
                 )}
 
                 <button 
