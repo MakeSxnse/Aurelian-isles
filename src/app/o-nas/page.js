@@ -196,7 +196,7 @@ export default function ONasPage() {
               <div className="shrink-0 w-full lg:w-auto">
                 <Link
                   href="/kontakt"
-                  className="w-full lg:w-auto block text-center px-10 py-5 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] hover:border-[#785A1A] transition-all duration-300 rounded-sm"
+                  className="w-full lg:w-auto block text-center px-10 py-5 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] hover:border-[#785A1A] transition-all duration-300"
                 >
                   KONTAKTOVAT KURÁTORA
                 </Link>

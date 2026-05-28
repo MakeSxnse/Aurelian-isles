@@ -283,13 +283,13 @@ export default function PrivacyPage() {
           <div className="flex gap-4 flex-wrap justify-center md:justify-end">
             <Link
               href="/terms"
-              className="px-6 py-3 border border-zinc-300 text-zinc-700 text-xs font-sans font-bold tracking-[0.2em] uppercase hover:border-[#785A1A] hover:text-[#785A1A] transition-all duration-300 rounded-sm"
+              className="px-6 py-3 border border-zinc-300 text-zinc-700 text-xs font-sans font-bold tracking-[0.2em] uppercase hover:border-[#785A1A] hover:text-[#785A1A] transition-all duration-300"
             >
               PODMÍNKY UŽITÍ
             </Link>
             <Link
               href="/kontakt"
-              className="px-6 py-3 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] transition-all duration-300 rounded-sm"
+              className="px-6 py-3 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] transition-all duration-300"
             >
               KONTAKTOVAT NÁS
             </Link>

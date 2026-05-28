@@ -344,7 +344,7 @@ export default function PobockyPage() {
                     <div className="space-y-4">
                       <a
                         href="/kontakt"
-                        className="w-full block text-center py-4 bg-[#785A1A] text-white font-sans text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A]/90 transition-colors rounded-sm"
+                        className="w-full block text-center py-4 bg-[#785A1A] text-white font-sans text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A]/90 transition-colors"
                       >
                         VYŽÁDAT KONZULTACI
                       </a>

@@ -174,7 +174,7 @@ export default function TermsPage() {
           </p>
           <Link
             href="/kontakt"
-            className="shrink-0 px-8 py-4 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] transition-all duration-300 rounded-sm"
+            className="shrink-0 px-8 py-4 bg-[#001B3A] text-white text-xs font-sans font-bold tracking-[0.2em] uppercase hover:bg-[#785A1A] transition-all duration-300"
           >
             KONTAKTOVAT NÁS
           </Link>
