@@ -18,7 +18,7 @@ export default function Hero() {
                     }`}
             >
                 <Image
-                    src="/hero_bg.jpg"
+                    src="/hero.jpg"
                     alt="Soukromý ostrov"
                     fill
                     className="object-cover -z-20"
