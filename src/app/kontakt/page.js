@@ -24,7 +24,7 @@ export default function KontaktPage() {
 
     try {
       // Odešli data formuláře na PHP skript jako JSON
-      const res = await fetch("/contact.php", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
